@@ -25,3 +25,12 @@ print(5 in sample)
 #test for value present in dictionary.keys()
 print(1 in sample.keys())
 print("one" in sample.values())
+
+#del item with a given key
+del sample[1]
+print sample
+#removes all items in the dictionary
+sample.clear()
+print sample
+#Delete the dictionary
+del sample
