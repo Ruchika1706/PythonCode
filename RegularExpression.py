@@ -91,8 +91,28 @@ if re.match(pattern, "GrEy"):
     print("Match 1")
 
 # to match any number of characters we use *, in python we use (.*) group for the same
+# star * is to match 0 or more occurences of the previous thing
+# () is to make groups in python
 pattern = r"^Gr(.*)y$"
 if re.match(pattern, "GrEeeeey"):
     print("Match 1")
+
+pattern = r"eggs(bacon)*" # * means 0,1 or more repetitions of string bacon, it is accepted
+if re.match(pattern, "eggs"):
+    print("Star pattern found ")
+
+#Group in Python
+pattern = "bread(eggs)*bread"
+if re.match(pattern,"breadeggseggsbread"):
+    print("Group match found")
+#Character classes
+#match only a specific set of characters, example street name, wing name etc etc or like phone numbers or vehicle numbers
+#character class defined in [] square brackets
+#Upper case and lower case are different
+pattern = r"[a-z][a-z][0-9]"
+if re.match(pattern, "az3"):
+    print("Character class matched")
+
+
 
 
